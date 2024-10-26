@@ -390,8 +390,8 @@ endef
 TARGET_DEVICES += cetron_ct3003-ubootmod
 
 define Device/cmcc_a10
-  DEVICE_VENDOR := CMCC
-  DEVICE_MODEL := A10
+  DEVICE_VENDOR := ZN
+  DEVICE_MODEL := M5
   DEVICE_DTS := mt7981b-cmcc-a10
   DEVICE_VARIANT := (OpenWrt U-Boot layout)
   DEVICE_DTS_DIR := ../dts
@@ -415,8 +415,8 @@ endef
 TARGET_DEVICES += cmcc_a10
 
 define Device/cmcc_a10-ubootmod
-  DEVICE_VENDOR := CMCC
-  DEVICE_MODEL := A10
+  DEVICE_VENDOR := ZN
+  DEVICE_MODEL := M5
   DEVICE_VARIANT := (custom U-Boot layout)
   DEVICE_DTS := mt7981b-cmcc-a10-ubootmod
   DEVICE_DTS_DIR := ../dts
