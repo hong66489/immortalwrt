@@ -121,7 +121,7 @@
 +/ {
 +	#address-cells = <1>;
 +	#size-cells = <1>;
-+	model = "CMCC A10";
++	model = "ZN M5";
 +	compatible = "mediatek,mt7981", "mediatek,mt7981-rfb";
 +
 +	chosen {
