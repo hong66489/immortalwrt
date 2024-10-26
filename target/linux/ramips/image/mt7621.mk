@@ -2150,8 +2150,8 @@ TARGET_DEVICES += sercomm_na502s
 
 define Device/sim_simax1800t
   $(Device/haier-sim_wr1800k)
-  DEVICE_VENDOR := SIM
-  DEVICE_MODEL := SIMAX1800T
+  DEVICE_VENDOR := ZN
+  DEVICE_MODEL := M5
 endef
 TARGET_DEVICES += sim_simax1800t
 
