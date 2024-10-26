@@ -215,7 +215,7 @@ define U-Boot/mt7981_abt_asr3000
 endef
 
 define U-Boot/mt7981_cmcc_a10
-  NAME:=CMCC A10
+  NAME:=ZN M5
   BUILD_SUBTARGET:=filogic
   BUILD_DEVICES:=cmcc_a10
   UBOOT_CONFIG:=mt7981_cmcc_a10
