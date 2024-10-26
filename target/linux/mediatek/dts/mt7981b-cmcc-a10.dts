@@ -10,7 +10,7 @@
 #include "mt7981.dtsi"
 
 / {
-	model = "CMCC A10 (OpenWrt U-Boot layout)";
+	model = "ZN M5 (OpenWrt U-Boot layout)";
 	compatible = "cmcc,a10", "mediatek,mt7981";
 
 	aliases {
