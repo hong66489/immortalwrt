@@ -4,7 +4,7 @@
 #include "mt7981b-cmcc-a10.dts"
 
 / {
-	model = "CMCC A10 (custom U-Boot layout)";
+	model = "ZN M5 (custom U-Boot layout)";
 	compatible = "cmcc,a10-ubootmod", "mediatek,mt7981";
 };
 
