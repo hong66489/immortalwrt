@@ -20,6 +20,7 @@ ramips_setup_interfaces()
 	h3c,tx1800-plus|\
 	h3c,tx1801-plus|\
 	h3c,tx1806|\
+    jcg,q20|\
 	haier,har-20s2u1|\
 	hiwifi,hc5962|\
 	jdcloud,re-cp-02|\
@@ -105,7 +106,6 @@ ramips_setup_interfaces()
 	iodata,wn-deax1800gr|\
 	iptime,a3002mesh|\
 	iptime,ax2002m|\
-	jcg,q20|\
 	jdcloud,re-sp-01b|\
 	lenovo,newifi-d1|\
 	mikrotik,routerboard-m33g|\
@@ -334,6 +334,11 @@ ramips_setup_macs()
 		lan_mac=$(mtd_get_mac_ascii Config mac)
 		wan_mac=$(macaddr_add "$lan_mac" 1)
 		label_mac=$lan_mac
+		;;
+    jcg,q20)
+		lan_mac=$(cat /sys/class/net/eth0/address)
+		label_mac=$lan_mac
+		wan_mac=$(macaddr_add "$lan_mac" 1)
 		;;
 	netgear,wax214v2)
 		lan_mac=$(mtd_get_mac_ascii Config ethaddr)
