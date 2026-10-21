@@ -8,7 +8,7 @@
 
 / {
 	compatible = "jcg,q20", "mediatek,mt7621-soc";
-	model = "JCG Q20";
+	model = "360 T6GS";
 
 	aliases {
 		led-boot = &led_status_red;
@@ -43,13 +43,13 @@
 
 		reset {
 			label = "reset";
-			gpios = <&gpio 18 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 7 GPIO_ACTIVE_LOW>;
 			linux,code = <KEY_RESTART>;
 		};
 
 		wps {
 			label = "wps";
-			gpios = <&gpio 16 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 6 GPIO_ACTIVE_LOW>;
 			linux,code = <KEY_WPS_BUTTON>;
 		};
 	};
@@ -167,33 +167,32 @@
 };
 
 &gmac0 {
-	nvmem-cells = <&macaddr_factory_3fff4>;
+	nvmem-cells = <&macaddr_factory_3fff4 0>;
 	nvmem-cell-names = "mac-address";
-};
-
-&gmac1 {
-	status = "okay";
-	label = "wan";
-	phy-handle = <&ethphy0>;
-
-	nvmem-cells = <&macaddr_factory_3fffa>;
-	nvmem-cell-names = "mac-address";
-};
-
-&ethphy0 {
-	/delete-property/ interrupts;
 };
 
 &switch0 {
 	ports {
-		port@1 {
+		port@0 {
 			status = "okay";
 			label = "lan1";
 		};
 
-		port@4 {
+        port@1 {
 			status = "okay";
 			label = "lan2";
+		};
+
+        port@2 {
+			status = "okay";
+			label = "lan3";
+		};
+
+		port@3 {
+			status = "okay";
+			label = "wan";
+            nvmem-cells = <&macaddr_factory_3fffa 1>;
+	        nvmem-cell-names = "mac-address";
 		};
 	};
 };
